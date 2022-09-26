@@ -7,13 +7,14 @@
 html {
   font-family: 'Dosis', sans-serif;
   height: 100%;
-  background-image: url(../img/pexels-pixabay-45230.jpg);
+  background-color: beige;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.7)), url(../img/pexels-pixabay-45230.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-/* HEADER */
+/* HEADER START */
 
 .header {
   text-align: center;
@@ -26,9 +27,9 @@ html {
   animation: plane-enter 5s ease-out both, plane-hover 5s 5s linear infinite;
 }
 
-/* HEADER END*/
+/* HEADER END */
 
-/* MAIN */
+/* MAIN START */
 
 .main {
   color: white;
@@ -37,6 +38,11 @@ html {
 
 .main--heading {
   margin-bottom: 5px;
+  text-shadow: 0px 0px 5px black;
+}
+
+.main--paragraph {
+  text-shadow: 0px 0px 5px black;
 }
 
 .button {
@@ -48,18 +54,28 @@ html {
   border-radius: 10000px;
   display: inline-block;
   margin-top: 10px;
-  transition: background-color 5s;
+  cursor: pointer;
 }
 
 .button:hover {
-  background-color: rgb(99, 85, 77);
+  background-image: radial-gradient(circle at center, rgb(104, 85, 73) 1%, rgb(73, 60, 52) 1%);
+  background-size: 10000% 10000%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  transition: background-size ease-in-out 0.2s;
 }
 
-/* MAIN END*/
+.button:hover:active {
+  transition-duration: 0s;
+  background-size: 100% 100%;
+}
 
-/* ANIMATIONS */
+/* MAIN END */
+
+/* ANIMATIONS START */
 
 @keyframes plane-enter {
+
   0% {
     opacity: 0;
     transform: translate(-60vw, 0px);
@@ -95,4 +111,4 @@ html {
   }
 }
 
-/* ANIMATIONS END*/
+/* ANIMATIONS END */
